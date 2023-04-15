@@ -11,61 +11,33 @@ namespace NlogDemo
     {
         static void Main(string[] args)
         {
-            //Sum sum = new Sum();
-            //sum.DoSum(10, 20);
+            // Create a new dictionary
+            Dictionary<int, string> dict = new Dictionary<int, string>();
 
-            // Create a new ArrayList
-            ArrayList list = new ArrayList();
+            // Add some items to the dictionary
+            dict.Add(1, "Alice");
+            dict.Add(2, "Bob");
+            dict.Add(3, "Charlie");
 
-            // Add some items to the list
-            list.Add("Apple");
-            list.Add("Banana");
-            list.Add("Cherry");
-            list.Add("Durian");
+            // Read an item from the dictionary
+            Console.WriteLine($"Item with key 2: {dict[2]}");
 
-            // Print the items in the list
-            Console.WriteLine("Items in the list:");
-            PrintList(list);
+            // Update an item in the dictionary
+            dict[2] = "Barbara";
+            Console.WriteLine($"Item with key 2 after updating: {dict[2]}");
 
-            // Update an item in the list
-            list[2] = "Grape";
+            // Delete an item from the dictionary
+            dict.Remove(3);
+            Console.WriteLine($"Item with key 3 after deleting: {dict.ContainsKey(3)}");
 
-            // Print the items in the list again
-            Console.WriteLine("\nItems in the list after updating an item:");
-            PrintList(list);
-
-            // Remove an item from the list
-            list.RemoveAt(1);
-
-            // Print the items in the list again
-            Console.WriteLine("\nItems in the list after removing an item:");
-            PrintList(list);
-
-            // Insert an item into the list
-            list.Insert(0, "Fig");
-
-            // Print the items in the list again
-            Console.WriteLine("\nItems in the list after inserting an item:");
-            PrintList(list);
-
-            // Clear all items from the list
-            list.Clear();
-
-            // Print the items in the list again
-            Console.WriteLine("\nItems in the list after clearing all items:");
-            PrintList(list);
-
-            Console.ReadKey();
-        }
-
-        // Helper method to print the items in the list
-        static void PrintList(ArrayList list)
-        {
-            foreach (var item in list)
+            // Iterate over the dictionary
+            Console.WriteLine("All items in the dictionary:");
+            foreach (KeyValuePair<int, string> item in dict)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item.Key}: {item.Value}");
             }
 
+            Console.ReadKey();
         }
     }
 }
