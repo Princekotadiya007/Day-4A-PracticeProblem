@@ -1,0 +1,3 @@
+﻿2023-04-10 09:32:10.4985|ERROR|NlogDemo.Nlogs|a and b value are zero
+2023-04-10 09:32:41.3622|DEBUG|NlogDemo.Nlogs|Debug sucessfully
+2023-04-10 09:32:41.3802|INFO|NlogDemo.Nlogs|Adition of =10+20=30
